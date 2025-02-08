@@ -1,7 +1,7 @@
 # data-warehouse-project
 
 **Data Warehouse and Analytics Project**
-Building a modern data warehouse with MySQL, including ETL processes, Data Modeling and Analytics
+Building a modern data warehouse with PostgreSQL, including ETL processes, Data Modeling and Analytics
 
 This project demonstrates a comprehensive Data Warehousing and Analytics solution, from building a Data Warehouse to generate actioanble insights. Designed as a portfolio project which highlights industry best practices in Data Engineering and Analytics.
 
@@ -12,7 +12,7 @@ This project demonstrates a comprehensive Data Warehousing and Analytics solutio
 ### Building the Data Warehouse
 
 #### Objective 
-Develop a modern data warehouse using MySQL to consolidate sales data, enabling analytical reporting and informed decision-making.
+Develop a modern data warehouse using PostgreSQL to consolidate sales data, enabling analytical reporting and informed decision-making.
 
 #### Specifications
 - **Data Sources**: Import the data from two source systems (ERP & CRM) provided as CSV files.
