@@ -17,7 +17,9 @@ Usage Example:
     CALL silver.load_bronze();
 ===============================================================================
 */
-CREATE OR REPLACE PROCEDURE silver.load_silver AS
+CREATE OR REPLACE PROCEDURE silver.load_silver()
+LANGUAGE plpgsql
+AS $$
 BEGIN
     DECLARE 
 		batch_start_time TIMESTAMP;
@@ -235,15 +237,15 @@ BEGIN
 			maintenance
 		FROM bronze.erp_px_cat_g1v2;
 		end_time = NOW();
-		RAISE NOTICE '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
+		RAISE NOTICE '>>Load Duration: % seconds', ROUND(EXTRACT(EPOCH FROM (end_time - start_time))::NUMERIC, 3);
         RAISE NOTICE '>> -------------';
 
 		batch_end_time = NOW();
-		RAISE NOTICE '=========================================='
+		RAISE NOTICE '==========================================';
 		RAISE NOTICE 'Loading Silver Layer is Completed';
         RAISE NOTICE '>>Total Load Duration: % seconds', ROUND(EXTRACT(EPOCH FROM (end_time - start_time))::NUMERIC, 3);
-		RAISE NOTICE '=========================================='
-		
+		RAISE NOTICE '==========================================';
+	
 	EXCEPTION
         WHEN OTHERS THEN
             RAISE EXCEPTION 'ERROR OCCURED WHILE LOADING THE SILVER LAYER: %, SQLSTATE: %', SQLERRM, SQLSTATE;
