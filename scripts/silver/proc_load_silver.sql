@@ -14,7 +14,7 @@ Parameters:
 	  This stored procedure does not accept any parameters or return any values.
 
 Usage Example:
-    CALL silver.load_bronze();
+    CALL silver.load_silver();
 ===============================================================================
 */
 CREATE OR REPLACE PROCEDURE silver.load_silver()
