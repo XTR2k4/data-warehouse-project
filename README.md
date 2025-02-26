@@ -1,4 +1,4 @@
-# data-warehouse-project
+# SQL-Data-Warehouse-Project
 
 **Data Warehouse and Analytics Project**
 Building a modern data warehouse with PostgreSQL, including ETL processes, Data Modeling and Analytics
