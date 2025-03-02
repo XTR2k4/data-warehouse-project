@@ -23,7 +23,9 @@ SELECT
 	ci.cst_key AS customer_number,
 	ci.cst_firstname AS first_name,
 	ci.cst_lastname AS last_name,
-	la.cntry AS country,
+	CASE WHEN la.cntry IS NULL THEN 'n/a' 
+		 ELSE cntry
+	END AS country,
 	ci.cst_marital_status AS marital_status,
 	CASE WHEN ci.cst_gndr != 'n/a' THEN ci.cst_gndr
 		 ELSE COALESCE(ca.gen, 'n/a')
