@@ -5,7 +5,6 @@ Building a modern data warehouse with PostgreSQL, including ETL processes, Data 
 
 This project demonstrates a comprehensive Data Warehousing and Analytics solution, from building a Data Warehouse to generate actioanble insights. Designed as a portfolio project which highlights industry best practices in Data Engineering and Analytics.
 
-docs/data_model.png
 ---
 
 ## Project Requirements
